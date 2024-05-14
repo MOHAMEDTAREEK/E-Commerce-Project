@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.buttonstyle {
+  display: flex;
+  border-radius: 0.25rem /* 4px */;
+  background-color: rgba(104, 177, 186, 0.3);
+  padding: 5px 10px;
+  margin: 30px 10px 20px /* 28px */;
+  font-size: 1.25rem /* 20px */;
+  font-weight: 500;
+  color: rgb(0 0 0);
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  height: 45px;
+}
+.buttonstyle:hover {
+  color: #f24e29;
+}
+.products {
+  display: flex;
+  padding: 40px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2.5rem /* 40px */;
+}
+.product {
+  position: relative;
+  overflow: hidden;
+  width: 16rem /* 256px */;
+  height: 600px;
+  margin: 0 12px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem /* 8px */;
+  background-color: white;
+  --tw-shadow: 5px 20px 30px -10px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  flex-wrap: nowrap;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem /* 4px */;
+  padding: 1.25rem /* 20px */;
+}
+.title {
+  font-size: 1.25rem /* 20px */;
+  line-height: 1.25;
+  font-weight: 500;
+  color: black;
+  height: 5rem /* 64px */;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 3px;
+}
+.p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 6rem /* 96px */;
+  line-height: 1.5;
+  font-size: 1rem /* 16px */;
+  margin-bottom: 1rem /* 16px */;
+  color: #777;
+}
+.image {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  padding: 1.25rem /* 20px */;
+  align-content: center;
+}
+.price {
+  --tw-text-opacity: 1;
+  color: rgb(242 78 41 / var(--tw-text-opacity));
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 1.125rem /* 18px */;
+}
+.info {
+  border-top-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(245 245 245 / var(--tw-border-opacity));
+  padding-left: 1.5rem /* 24px */;
+  padding-right: 1.5rem /* 24px */;
+  padding-top: 0.75rem /* 12px */;
+  padding-bottom: 0.75rem /* 12px */;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+}
+.addToCart {
+  font-weight: 700;
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+  --tw-text-opacity: 1;
+  color: rgb(53 154 167 / var(--tw-text-opacity));
+}
+.i {
+  width: 40px;
+  height: 40px;
+  color: #359aa7;
+  font-size: 1.125rem /* 18px */;
+  font-weight: 900;
+  padding: 1.25rem /* 20px */;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartProduct {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.25rem /* 20px */;
+  gap: 1.25rem /* 20px */;
+  border-bottom: 1px solid #77777741;
+}
+.imageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem /* 4px */;
+}
+.description {
+  --tw-text-opacity: 1;
+  color: rgb(119 119 119 / var(--tw-text-opacity));
+  font-size: 0.875rem /* 14px */;
+  line-height: 1.25rem /* 20px */;
+  height: 40px;
+  overflow: hidden;
+  width: 250px;
+}
+.removeButton {
+  display: flex;
+  border-radius: 0.25rem /* 4px */;
+  background-color: rgba(104, 177, 186, 0.3);
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(0 0 0);
+  text-align: center;
+  justify-content: right;
+  align-items: center;
+  white-space: nowrap;
+  height: 25px;
+  width: fit-content;
+}
+.removeButton:hover {
+  background-color: #f24e29;
+  color: white;
+}
+.cartCounter {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f24e29;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 15px;
+  top: -10px;
+  right: -10px;
+}
