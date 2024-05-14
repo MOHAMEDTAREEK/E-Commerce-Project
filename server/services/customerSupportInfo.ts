@@ -11,7 +11,7 @@ const getCustomerSupportInfoById = async (id: string) => {
 };
 
 const createCustomerSupportInfo = async (customerSupportInfo: any) => {
-  const newCustomerSupportInfo = await CustomerSupportInfo.createCollection(
+  const newCustomerSupportInfo = await CustomerSupportInfo.create(
     customerSupportInfo
   );
   return newCustomerSupportInfo;

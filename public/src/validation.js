@@ -36,32 +36,32 @@ function preventSubmit() {
   return false;
 }
 
-async function sendData() {
-  //send data
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
+// async function sendData() {
+//   //send data
+//   let name = document.getElementById("name").value;
+//   let email = document.getElementById("email").value;
+//   let password = document.getElementById("password").value;
 
-  const apiUrl = "http://localhost:3000/api/customerInfo/";
+//   const apiUrl = "http://localhost:3000/api/customerInfo/";
 
-  // Use Fetch API for sending the POST request
-  try {
-    const response = await fetch(apiUrl, {
-      method: "POST", // HTTP method for sending data
-      headers: {
-        "Content-Type": "application/json", // Specify JSON data format
-      },
-      body: JSON.stringify(name, email, password), // Convert data object to JSON string
-    });
+//   // Use Fetch API for sending the POST request
+//   try {
+//     const response = await fetch(apiUrl, {
+//       method: "POST", // HTTP method for sending data
+//       headers: {
+//         "Content-Type": "application/json", // Specify JSON data format
+//       },
+//       body: JSON.stringify({ name, email, password }), // Correct
+//     });
 
-    if (response.ok) {
-      console.log("Data sent successfully!");
-      // Handle successful response (e.g., display a message)
-    } else {
-      console.error("Error sending data:", response.statusText);
-      // Handle errors (e.g., display an error message)
-    }
-  } catch (error) {
-    console.error("Error:", error);
-  }
-}
+//     if (response.ok) {
+//       console.log("Data sent successfully!");
+//       // Handle successful response (e.g., display a message)
+//     } else {
+//       console.error("Error sending data:", response.statusText);
+//       // Handle errors (e.g., display an error message)
+//     }
+//   } catch (error) {
+//     console.error("Error:", error);
+//   }
+// }

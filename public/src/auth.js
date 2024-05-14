@@ -4,7 +4,7 @@ let passwords = [];
 ////////////////////////////////////////
 
 const getUsers = () => {
-  fetch("https://fakestoreapi.com/users")
+  fetch("http://localhost:3000/api/users/")
     .then((res) => res.json())
     .then((array) => {
       array.forEach((arrayItem) => {
