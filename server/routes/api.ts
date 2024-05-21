@@ -1,7 +1,7 @@
 import express from "express";
-import productsRouter from "./productRoute";
-import customerInfoRouter from "./customerInfoRoute";
-import userRouter from "./userRoute";
+import productsRouter from "./products.route";
+import customerInfoRouter from "./customer-support.route";
+import userRouter from "./users.route";
 
 const api = express.Router();
 

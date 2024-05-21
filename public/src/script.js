@@ -16,7 +16,7 @@ const renderCategories = (categories) => {
 
 /////////     fetch categories    ///////////
 const fetchCategories = () => {
-  fetch("https://fakestoreapi.com/products/categories")
+  fetch(`http://localhost:3000/api/products/categories`)
     .then((response) => response.json())
     .then((categories) => {
       renderCategories(categories);
@@ -26,6 +26,7 @@ const fetchCategories = () => {
       console.error(err);
     });
 };
+
 fetchCategories();
 ///////////////////////////////////////////////
 

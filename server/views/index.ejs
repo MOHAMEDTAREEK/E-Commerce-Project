@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>User List</title>
+  </head>
+  <body>
+    <h1>User List</h1>
+    <ul>
+      <% for (const user of users) { %>
+      <li>Name: <%= user.name %> - Email: <%= user.email %></li>
+      <% } %>
+    </ul>
+  </body>
+</html>

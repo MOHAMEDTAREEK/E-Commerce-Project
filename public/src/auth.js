@@ -1,5 +1,5 @@
 //////////   initialization   ///////////
-let usernames = [];
+let emails = [];
 let passwords = [];
 ////////////////////////////////////////
 
@@ -8,10 +8,10 @@ const getUsers = () => {
     .then((res) => res.json())
     .then((array) => {
       array.forEach((arrayItem) => {
-        usernames.push(arrayItem.username);
+        emails.push(arrayItem.email);
         passwords.push(arrayItem.password);
       });
-      console.log("usernames", usernames);
+      console.log("emails", emails);
       console.log("passwords", passwords);
     })
     .catch((err) => {
@@ -26,19 +26,19 @@ let form = document.getElementById("form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  let username = document.getElementById("username").value;
+  let email = document.getElementById("email").value;
   let loginPassword = document.getElementById("loginPassword").value;
-  console.log("username", username);
+  console.log("email", email);
   console.log("loginPassword", loginPassword);
-  fetchUsers(username, loginPassword);
+  addUser(email, loginPassword);
 });
 
-const fetchUsers = (username, loginPassword) => {
-  fetch("https://fakestoreapi.com/auth/login", {
+const addUser = (email, password) => {
+  fetch("http://localhost:3000/api/users", {
     method: "POST",
     body: JSON.stringify({
-      username: `${username}`,
-      password: `${loginPassword}`,
+      email: `${email}`,
+      password: `${password}`,
     }),
     headers: {
       Accept: "application/json",
